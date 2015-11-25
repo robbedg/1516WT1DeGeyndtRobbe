@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{01D6364F-8863-4E2E-BDD3-4FD932B1FBF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataInterfaces", "DataInterfaces\DataInterfaces.csproj", "{19C3D132-5A7B-450F-8EEE-A0FAA241BB87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataImplementation", "DataImplementation\DataImplementation.csproj", "{C7F3D5E5-FE3F-4EE8-98B1-7ECDAB43713E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01D6364F-8863-4E2E-BDD3-4FD932B1FBF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D6364F-8863-4E2E-BDD3-4FD932B1FBF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D6364F-8863-4E2E-BDD3-4FD932B1FBF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D6364F-8863-4E2E-BDD3-4FD932B1FBF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19C3D132-5A7B-450F-8EEE-A0FAA241BB87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C3D132-5A7B-450F-8EEE-A0FAA241BB87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C3D132-5A7B-450F-8EEE-A0FAA241BB87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C3D132-5A7B-450F-8EEE-A0FAA241BB87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7F3D5E5-FE3F-4EE8-98B1-7ECDAB43713E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F3D5E5-FE3F-4EE8-98B1-7ECDAB43713E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F3D5E5-FE3F-4EE8-98B1-7ECDAB43713E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F3D5E5-FE3F-4EE8-98B1-7ECDAB43713E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
