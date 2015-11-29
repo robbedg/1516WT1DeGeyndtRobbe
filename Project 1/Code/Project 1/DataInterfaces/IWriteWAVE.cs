@@ -9,7 +9,8 @@ namespace DataInterfaces
     public interface IWriteWAVE
     {
         char[] textArray { get; set; }
-        void readCSV();
-        void toWAVE();
+        string getPath();
+        bool readCSV(string path);
+        void toWAVE(string path, decimal seconds);
     }
 }

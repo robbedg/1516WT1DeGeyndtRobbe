@@ -14,15 +14,31 @@ namespace DataImplementation
 
         public char[] textArray { get; set; }
 
-        public void readCSV()
+        public string getPath()
         {
-            dict = File.ReadLines("test.csv").Select(line => line.Split(',')).ToDictionary(line => line[0][0], line => Int32.Parse(line[1]));
+            string thispath = Environment.CurrentDirectory;
+            int length = thispath.IndexOf("GUI");
+            string basepath = thispath.Substring(0, length);
+            return Path.Combine(basepath, @"Data");
         }
 
-        public void toWAVE()
+        public bool readCSV(string path)
         {
+            string filepath = Path.Combine(path, @"table.csv");
+            try {
+                dict = File.ReadLines(filepath).Select(line => line.Split(',')).ToDictionary(line => line[0][0], line => Int32.Parse(line[1]));
+            }
+            catch(Exception)
+            {
+                return false;
+            }
+            return true;
+        }
 
-            FileStream stream = new FileStream("test.wav", FileMode.Create);
+        public void toWAVE(string path, decimal seconds)
+        {
+            string filepath = Path.Combine(path, @"output.wav");
+            FileStream stream = new FileStream(filepath, FileMode.Create);
             BinaryWriter writer = new BinaryWriter(stream);
 
             int RIFF = 0x46464952;
@@ -38,7 +54,7 @@ namespace DataImplementation
             int bytesPerSecond = samplesPerSecond * frameSize;
             int waveSize = 4;
             int data = 0x61746164;
-            int samples = 44100 * textArray.Count();
+            int samples = (int)(Math.Round((44100 * seconds) * textArray.Count()));
             int dataChunkSize = samples * frameSize;
             int fileSize = waveSize + headerSize + formatChunkSize + headerSize + dataChunkSize;
 
@@ -60,7 +76,13 @@ namespace DataImplementation
 
             for (int i = 0; i < textArray.Count(); i++)
             {
-                int freq = dict[textArray[i]];
+                int freq = 0;
+                if (dict.ContainsKey(textArray[i]))
+                {
+                    freq = dict[textArray[i]];
+                    
+                }
+                
                 for (int j = 0; j < samples / textArray.Count(); j++)
                 {
                     double t = (double)j / (double)samplesPerSecond;
