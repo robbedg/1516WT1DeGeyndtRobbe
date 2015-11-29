@@ -31,7 +31,7 @@ namespace GUI
             {
                 ww.textArray = TextBox.Text.ToLower().ToCharArray();
                 ww.toWAVE(ww.getPath(), numericSeconds.Value);
-                labelOutput.Text = "OK";
+                labelOutput.Text = "WAVE is ready to play.";
             }
             else
             {

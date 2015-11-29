@@ -103,24 +103,24 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Seconds par letter:";
+            this.label2.Text = "Seconds per letter:";
             // 
             // numericSeconds
             // 
             this.numericSeconds.DecimalPlaces = 2;
             this.numericSeconds.Increment = new decimal(new int[] {
-            25,
+            5,
             0,
             0,
             131072});
             this.numericSeconds.Location = new System.Drawing.Point(12, 25);
             this.numericSeconds.Maximum = new decimal(new int[] {
-            10,
+            5,
             0,
             0,
             0});
             this.numericSeconds.Minimum = new decimal(new int[] {
-            25,
+            5,
             0,
             0,
             131072});
@@ -128,10 +128,10 @@
             this.numericSeconds.Size = new System.Drawing.Size(93, 20);
             this.numericSeconds.TabIndex = 8;
             this.numericSeconds.Value = new decimal(new int[] {
-            1,
+            25,
             0,
             0,
-            0});
+            131072});
             // 
             // label3
             // 
