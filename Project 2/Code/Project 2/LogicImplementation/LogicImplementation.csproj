@@ -43,6 +43,20 @@
     <Compile Include="Logic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataImplementation\DataImplementation.csproj">
+      <Project>{4afad03b-1b6c-4434-9bf7-3efbf5f44251}</Project>
+      <Name>DataImplementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataInterfaces\DataInterfaces.csproj">
+      <Project>{8538412d-0f5a-40e9-aaa4-76694f4871c9}</Project>
+      <Name>DataInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fourier\Fourier.csproj">
+      <Project>{d91cffc2-5f90-4578-b8f9-7659bb8fc524}</Project>
+      <Name>Fourier</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

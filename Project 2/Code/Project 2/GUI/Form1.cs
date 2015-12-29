@@ -21,7 +21,6 @@ namespace GUI
         private void buttonOpenfile_Click(object sender, EventArgs e)
         {
             //https://msdn.microsoft.com/en-us/library/system.windows.forms.openfiledialog(v=vs.110).aspx
-            Stream myStream = null;
             OpenFileDialog window = new OpenFileDialog();
 
             window.Filter = "WAVE Files (*.wav, *.wave, *.WAV, *.WAVE)|*.wav;*.wave;*.WAV;*.WAVE|All Files (*.*)|*.*";
