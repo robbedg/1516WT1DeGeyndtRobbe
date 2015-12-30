@@ -1,6 +1,7 @@
 ﻿using DataImplementation;
 using DataInterfaces;
 using FourierLib;
+using LogicInterfaces;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -10,10 +11,15 @@ using System.Threading.Tasks;
 
 namespace LogicImplementation
 {
-    public class Logic
+    public class Logic : ILogic
     {
         IReadWAV readwav = new ReadWAV();
-        public void test(int samplelength, string path)
+
+        //Array with samples/letters
+        public float[][] array { get; set; }
+
+        //Fourier on arrays
+        public void doFourier(int samplelength, string path)
         {
             float[] wav = readwav.getWav(path);
             int samplesize = samplelength * 44100;
@@ -22,18 +28,18 @@ namespace LogicImplementation
             int amount = (wav.Count() / samplesize);
  
 
-            float[][] stack = new float[amount][];
+            array = new float[amount][];
 
             //Split array in individual letters.
             for (int i = 0; i < amount; i++)
             {
-                stack[i][] = (getSubarray(wav, (i * samplesize), (i * samplesize) + samplesize));
+                array[i] = (getSubarray(wav, (i * samplesize), (i * samplesize) + samplesize));
             }
 
             //Do fourrier transformation.
             for (int i = 0; i < amount; i++)
             {
-                Fourier.RFFT(stack[i], FourierDirection.Forward);
+                Fourier.RFFT(array[i], FourierDirection.Forward);
             }
             
         }

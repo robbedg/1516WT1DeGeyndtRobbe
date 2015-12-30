@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FA5ED180-6002-4BD9-85FF-D9379DC7397E}</ProjectGuid>
+    <ProjectGuid>{ED142F48-E284-4BF9-AE16-434FF5D6630B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogicImplementation</RootNamespace>
-    <AssemblyName>LogicImplementation</AssemblyName>
+    <RootNamespace>LogicInterfaces</RootNamespace>
+    <AssemblyName>LogicInterfaces</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,26 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logic.cs" />
+    <Compile Include="ILogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DataImplementation\DataImplementation.csproj">
-      <Project>{4afad03b-1b6c-4434-9bf7-3efbf5f44251}</Project>
-      <Name>DataImplementation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataInterfaces\DataInterfaces.csproj">
-      <Project>{8538412d-0f5a-40e9-aaa4-76694f4871c9}</Project>
-      <Name>DataInterfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Fourier\Fourier.csproj">
-      <Project>{d91cffc2-5f90-4578-b8f9-7659bb8fc524}</Project>
-      <Name>Fourier</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LogicInterfaces\LogicInterfaces.csproj">
-      <Project>{ed142f48-e284-4bf9-ae16-434ff5d6630b}</Project>
-      <Name>LogicInterfaces</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
