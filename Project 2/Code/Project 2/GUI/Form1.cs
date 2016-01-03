@@ -18,7 +18,7 @@ namespace GUI
         //Initialize Frequenties
         IFrequencies frequencies = new Frequencies();
         //Initialize Letters
-        ILetters letters = new Letters();
+        ILetters letters = null;
 
         public Form1()
         {
@@ -62,6 +62,7 @@ namespace GUI
 
             if (CSVwindows.ShowDialog() == DialogResult.OK)
             {
+                letters = new Letters();
                 string path = CSVwindows.FileName;
                 textBoxPath.Text = path;
                 letters.readCSV(path);
