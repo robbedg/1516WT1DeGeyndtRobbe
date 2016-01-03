@@ -36,6 +36,8 @@
             this.buttonCSV = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBoxOutput = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericSeconds)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,15 +130,36 @@
             // 
             this.richTextBoxOutput.Location = new System.Drawing.Point(12, 103);
             this.richTextBoxOutput.Name = "richTextBoxOutput";
+            this.richTextBoxOutput.ReadOnly = true;
             this.richTextBoxOutput.Size = new System.Drawing.Size(260, 146);
             this.richTextBoxOutput.TabIndex = 14;
             this.richTextBoxOutput.Text = "";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 252);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Status:";
+            // 
+            // labelStatus
+            // 
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.Location = new System.Drawing.Point(9, 265);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(22, 13);
+            this.labelStatus.TabIndex = 16;
+            this.labelStatus.Text = "OK";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 282);
+            this.Controls.Add(this.labelStatus);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.richTextBoxOutput);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonCSV);
@@ -145,8 +168,10 @@
             this.Controls.Add(this.numericSeconds);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonOpenfile);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "WAV to text";
             ((System.ComponentModel.ISupportInitialize)(this.numericSeconds)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,6 +188,8 @@
         private System.Windows.Forms.Button buttonCSV;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox richTextBoxOutput;
+        private System.Windows.Forms.Label labelStatus;
+        private System.Windows.Forms.Label label4;
     }
 }
 

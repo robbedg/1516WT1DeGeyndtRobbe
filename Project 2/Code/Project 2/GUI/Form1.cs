@@ -8,7 +8,6 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
@@ -19,12 +18,12 @@ namespace GUI
         IFrequencies frequencies = new Frequencies();
         //Initialize Letters
         ILetters letters = null;
-
+        
         public Form1()
         {
             InitializeComponent();
         }
-
+       
         private void buttonOpenfile_Click(object sender, EventArgs e)
         {
             //https://msdn.microsoft.com/en-us/library/system.windows.forms.openfiledialog(v=vs.110).aspx
@@ -38,18 +37,31 @@ namespace GUI
             {
                 string path = window.FileName;
 
-                //Get Frequencies
-                int[] frequencyArray = frequencies.getFrequencies(numericSeconds.Value, path);
+                //Update text
+                labelStatus.Text = "Processing...";
+                this.Refresh();
 
-                //Get Text
-                string output = letters.getLetters(frequencyArray);
-                richTextBoxOutput.Text = output;
+                //Try reading WAVE
+                try
+                {     
+                    //Get Frequencies
+                    int[] frequencyArray = frequencies.getFrequencies(numericSeconds.Value, path);
+
+                    //Get Text
+                    string output = letters.getLetters(frequencyArray);
+                    richTextBoxOutput.Text = output;
+                    labelStatus.Text = "OK";
+                }
+                catch (Exception err)
+                {
+                    labelStatus.Text = "Could not read WAVE.";
+                }
             }
         }
 
         private void numericSeconds_ValueChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void buttonCSV_Click(object sender, EventArgs e)
@@ -65,8 +77,16 @@ namespace GUI
                 letters = new Letters();
                 string path = CSVwindows.FileName;
                 textBoxPath.Text = path;
-                letters.readCSV(path);
-                buttonOpenfile.Enabled = true;
+                try
+                {
+                    letters.readCSV(path);
+                    labelStatus.Text = "OK";
+                    buttonOpenfile.Enabled = true;
+                }
+                catch (Exception err)
+                {
+                    labelStatus.Text = "Could not read CSV.";
+                }
             }
         }
     }
