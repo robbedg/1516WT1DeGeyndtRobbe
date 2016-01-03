@@ -50,6 +50,11 @@ namespace LogicImplementation
             {
                 char x = ' ';
                 dict.TryGetValue(rounded[i], out x);
+                //If not found, put space.
+                if (x == '\0')
+                {
+                    x = ' ';
+                }
                 chars[i] = x;
             }
 
