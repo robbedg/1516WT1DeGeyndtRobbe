@@ -35,7 +35,7 @@ namespace DataImplementation
 
             //Put data in float-array
             int i = 0;
-            while (pos < length)
+            while (pos < wav.Length)
             {
                 sound[i] = bytesToFloat(wav[pos], wav[pos + 1]);
                 pos += 2;

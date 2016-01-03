@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace LogicInterfaces
 {
-    public interface ILogic
+    public interface IFrequencies
     {
-        float[][] array { get; set; }
-        void doFourier(int samplelength, string path);
+        int[] getFrequencies(decimal samplelength, string path);
     }
 }
