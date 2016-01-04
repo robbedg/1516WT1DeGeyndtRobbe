@@ -119,10 +119,11 @@ namespace LogicImplementation
                 frequencies[i] = (frequencies[i] * 44100) / length[i];
             }
 
-            //rerturn array with frequenties
+            //return array with frequenties
             return frequencies;
         }
 
+        //Get a subarray with specified start and end.
         private float[] getSubarray(float[] input, int start, int end)
         {
             float[] output = new float[end - start];
