@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IReadCSV.cs" />
     <Compile Include="IReadWAV.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

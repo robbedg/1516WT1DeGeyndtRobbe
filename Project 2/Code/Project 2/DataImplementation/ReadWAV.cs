@@ -19,7 +19,7 @@ namespace DataImplementation
             return (float)(Convert.ToDouble(full));
         }
 
-        public float[] getWav(string path)
+        public float[] getWAV(string path)
         {
             //Read file
             byte[] wav = File.ReadAllBytes(path);

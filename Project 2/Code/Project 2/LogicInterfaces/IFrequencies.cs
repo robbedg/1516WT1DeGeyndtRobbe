@@ -8,6 +8,7 @@ namespace LogicInterfaces
 {
     public interface IFrequencies
     {
-        int[] getFrequencies(decimal samplelength, string path);
+        void readWAV(string path);
+        int[] getFrequencies(decimal samplelength);
     }
 }

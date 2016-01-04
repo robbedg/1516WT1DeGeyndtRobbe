@@ -38,12 +38,14 @@
             this.richTextBoxOutput = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.labelStatus = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxWAVpath = new System.Windows.Forms.TextBox();
+            this.buttonCalc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericSeconds)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOpenfile
             // 
-            this.buttonOpenfile.Enabled = false;
             this.buttonOpenfile.Location = new System.Drawing.Point(182, 64);
             this.buttonOpenfile.Name = "buttonOpenfile";
             this.buttonOpenfile.Size = new System.Drawing.Size(90, 23);
@@ -55,7 +57,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 48);
+            this.label1.Location = new System.Drawing.Point(9, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 13);
             this.label1.TabIndex = 1;
@@ -69,7 +71,7 @@
             0,
             0,
             131072});
-            this.numericSeconds.Location = new System.Drawing.Point(12, 64);
+            this.numericSeconds.Location = new System.Drawing.Point(12, 103);
             this.numericSeconds.Maximum = new decimal(new int[] {
             5,
             0,
@@ -112,7 +114,7 @@
             this.buttonCSV.Location = new System.Drawing.Point(182, 25);
             this.buttonCSV.Name = "buttonCSV";
             this.buttonCSV.Size = new System.Drawing.Size(90, 23);
-            this.buttonCSV.TabIndex = 12;
+            this.buttonCSV.TabIndex = 0;
             this.buttonCSV.Text = "Open CSV-file";
             this.buttonCSV.UseVisualStyleBackColor = true;
             this.buttonCSV.Click += new System.EventHandler(this.buttonCSV_Click);
@@ -120,7 +122,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 87);
+            this.label3.Location = new System.Drawing.Point(9, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 13;
@@ -128,7 +130,7 @@
             // 
             // richTextBoxOutput
             // 
-            this.richTextBoxOutput.Location = new System.Drawing.Point(12, 103);
+            this.richTextBoxOutput.Location = new System.Drawing.Point(12, 142);
             this.richTextBoxOutput.Name = "richTextBoxOutput";
             this.richTextBoxOutput.ReadOnly = true;
             this.richTextBoxOutput.Size = new System.Drawing.Size(260, 146);
@@ -138,7 +140,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 252);
+            this.label4.Location = new System.Drawing.Point(9, 291);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 15;
@@ -147,22 +149,53 @@
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
-            this.labelStatus.Location = new System.Drawing.Point(9, 265);
+            this.labelStatus.Location = new System.Drawing.Point(9, 304);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(22, 13);
             this.labelStatus.TabIndex = 16;
             this.labelStatus.Text = "OK";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 13);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "WAV-file path:";
+            // 
+            // textBoxWAVpath
+            // 
+            this.textBoxWAVpath.Location = new System.Drawing.Point(12, 64);
+            this.textBoxWAVpath.Name = "textBoxWAVpath";
+            this.textBoxWAVpath.ReadOnly = true;
+            this.textBoxWAVpath.Size = new System.Drawing.Size(149, 20);
+            this.textBoxWAVpath.TabIndex = 18;
+            // 
+            // buttonCalc
+            // 
+            this.buttonCalc.Enabled = false;
+            this.buttonCalc.Location = new System.Drawing.Point(182, 103);
+            this.buttonCalc.Name = "buttonCalc";
+            this.buttonCalc.Size = new System.Drawing.Size(90, 23);
+            this.buttonCalc.TabIndex = 19;
+            this.buttonCalc.Text = "Calculate";
+            this.buttonCalc.UseVisualStyleBackColor = true;
+            this.buttonCalc.Click += new System.EventHandler(this.buttonCalc_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 282);
+            this.ClientSize = new System.Drawing.Size(284, 322);
+            this.Controls.Add(this.buttonCSV);
+            this.Controls.Add(this.buttonCalc);
+            this.Controls.Add(this.textBoxWAVpath);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.richTextBoxOutput);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.buttonCSV);
             this.Controls.Add(this.textBoxPath);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.numericSeconds);
@@ -190,6 +223,9 @@
         private System.Windows.Forms.RichTextBox richTextBoxOutput;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxWAVpath;
+        private System.Windows.Forms.Button buttonCalc;
     }
 }
 

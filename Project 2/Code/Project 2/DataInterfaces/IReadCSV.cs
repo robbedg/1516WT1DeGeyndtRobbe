@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace DataInterfaces
 {
-    public interface IReadWAV
+    public interface IReadCSV
     {
-        //Gets floatarray of data from WAV file.
-        float[] getWAV(string path);
+        Dictionary<int, char> getCSV(string path);
     }
 }
